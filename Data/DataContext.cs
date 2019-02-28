@@ -5,10 +5,12 @@ namespace DatingApp.API.Data
 {
     // We're inheriting from DbContext
     public class DataContext : DbContext
-    {   
+    {
         // ctor 
-        public DataContext(DbContextOptions<DataContext> options) : base (options) {}
+        public DataContext(DbContextOptions<DataContext> options) : base(options) { }
 
         public DbSet<Value> Values { get; set; }
+
+        public DbSet<User> Users { get; set; }
     }
 }
